@@ -13,6 +13,13 @@
                 "element": {"#": "main"}
             }
         },
+        "number": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "number"},
+                "value": 100
+            }
+        },
         "starRating": {
             "prototype": "ui/star-rating.reel",
             "properties": {
@@ -29,7 +36,11 @@
         "starRating2": {
             "prototype": "ui/star-rating.reel",
             "properties": {
-                "element": {"#": "starRating2"}
+                "element": {"#": "starRating2"},
+                "readOnly": "true"
+            },
+            "bindings": {
+                "value": {"<-": "@number.value"}
             }
         },
         "starRating3": {
@@ -88,8 +99,9 @@
         ReadOnly:
         <br>
         <div data-montage-id="starRatingStep"></div>
+        <input type="number" data-montage-id="number">
         <div data-montage-id="starRating2">
-            <div data-montage-id="starRating3" data-arg="*"></div>
+            <div data-montage-id="starRating3"></div>
         </div>
     </div>
 </body>
