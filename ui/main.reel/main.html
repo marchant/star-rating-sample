@@ -23,7 +23,11 @@
         "starRating": {
             "prototype": "ui/star-rating.reel",
             "properties": {
-                "element": {"#": "starRating"}
+                "element": {"#": "starRating"},
+                "numberStar": "6"
+            },
+            "bindings": {
+                "numberStar": {"<-": "@number.value"}
             }
         },
         "starRating10": {
